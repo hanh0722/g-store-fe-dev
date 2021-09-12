@@ -1,0 +1,51 @@
+:root {
+  --black: #000000;
+  --white: #fff;
+  --size-sm: 10px;
+  --size-md: 15px;
+  --size-lg: 20px;
+  --fs-sm: 14px;
+  --fs-md: 16px;
+  --fs-lg: 18px;
+  --radius-circle: 50%;
+  --blue: #5580ff;
+  --size-spm: 7px;
+}
+
+@font-face {
+  font-family: 'Poppins', sans-serif;
+  src: url("../../../assets/Poppins/Poppins-Medium.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+a:hover {
+  color: var(--black);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  display: none;
+}
+
+.overlay--back {
+  display: block;
+}
+/*# sourceMappingURL=main.css.map */

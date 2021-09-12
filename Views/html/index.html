@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <!-- BS Styles -->
+    <!-- FontAweSome Pro Kit -->
+    <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.12.0/css/pro.min.css">
+    <link rel="stylesheet" href="../assets/bootstrap-5.1.1-dist/css/bootstrap.min.css">
+    <!-- Main SCSS for all page -->
+    <link rel="stylesheet" href="../scss/styles/main/main.css">
+    <!-- SCSS for navigation -->
+    <link rel="stylesheet" href="../scss/styles/navigation/navigation.css">
+    <!-- SCSS for index page -->
+    <link rel="stylesheet" href="../scss/styles/index/index.css">
+
+</head>
+<!-- testing, remove height in style and comment after filling content -->
+<body style="height: 500vh;">
+    <div class="overlay"></div>
+    <nav class="main--nav d-flex align-items-center justify-content-between position-relative">
+        <div class="hamburger--nav d-flex flex-column justify-content-center align-items-center hamburger--main">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="logo--fs">
+            <img src="../assets/img/logo-2.png" alt="logo">
+        </div>
+        <ul class="navigation--items d-flex align-items-center list-unstyled mb-0">
+            <a href="/trang-chu"><li>Trang chủ</li></a>
+            <a href="/gioi-thieu"><li>Giới thiệu</li></a>
+            <a href="/tinh-nang"><li>Tính năng</li></a>
+            <a href="/ve-chung-toi"><li>Về chúng tôi</li></a>
+            <a href="/tin-tuc"><li>Tin tức</li></a>
+        </ul>
+        <div class="icon--function d-flex align-items-center">
+            <div class="search d-flex justify-content-center align-items-center">
+                <i class="far fa-search"></i>
+            </div>
+            <div class="hamburger--nav d-flex flex-column align-items-center justify-content-center hamburger--content">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </nav>
+    <script src="../js/navigation.js"></script>
+</body>
+</html>

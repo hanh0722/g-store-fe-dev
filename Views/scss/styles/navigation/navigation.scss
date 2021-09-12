@@ -1,0 +1,117 @@
+@import "../../constants/color";
+// import layout and color style with var
+// how to use, var(item with name inside)
+
+.main--nav {
+  height: 80px;
+  .logo--fs {
+    width: 150px;
+    height: 46px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+.navigation--items {
+  padding-right: 30px;
+  li {
+    padding: 10px 0 10px var(--size-md);
+    margin: 0 var(--size-sm);
+    position: relative;
+    &::before {
+      content: "";
+      left: 0;
+      top: 50%;
+      transform: translateY(-20%) translateX(20%);
+      width: var(--size-spm);
+      height: var(--size-spm);
+      background: var(--blue);
+      position: absolute;
+      border-radius: var(--radius-circle);
+      transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+      opacity: 0;
+    }
+    &::after {
+      content: "";
+    }
+    &:hover {
+      &::before {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0%);
+      }
+    }
+  }
+  a {
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-size: var(--fs-sm);
+  }
+}
+.search{
+    margin: 0 !important;
+}
+.hamburger--main{
+    display: none !important;
+}
+.hamburger--nav, .search {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  cursor: pointer;
+  div {
+    width: 20px;
+    height: 2px;
+    margin-bottom: 3px;
+    background: var(--black);
+  }
+  margin-left: var(--size-md);
+}
+
+@media screen and (max-width: 991px){
+    .hamburger--main{
+        display: flex !important;
+        z-index: 3;
+    }
+    .hamburger--content{
+        display: none !important;
+    }
+    .hamburger--nav{
+        margin: 0;
+    }
+    .navigation--items{
+        padding: 0;
+        position: absolute;
+        top: 100%;
+        z-index: 3;
+        flex-direction: column;
+        left: 0;
+        align-items: flex-start !important;
+        width: 100%;
+        background: var(--white);
+        transition: transform .75s ease;
+        transform: translateY(-150%);
+        pointer-events: none;
+    }
+    .back--items{
+        pointer-events: visible;
+        transform: translateY(0%);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main--nav{
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .main--nav{
+        .logo--fs{
+            width: 110px;
+        }
+    }
+}
